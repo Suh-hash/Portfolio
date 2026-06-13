@@ -5,9 +5,11 @@
 }
 
 body {
-  background: black;
-  color: white;
+  margin: 0;
   font-family: Arial;
+  color: white;
+  background: radial-gradient(circle at top, #0f172a, #000);
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -136,11 +138,12 @@ button:hover {
   border-radius: 20px;
   transition: 0.4s;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.4);
 }
 
 .project-gallery {
@@ -230,4 +233,60 @@ html {
   .project-card {
     width: 100%;
   }
+}
+console.log("My portfolio website is working!");
+
+const fills = document.querySelectorAll(".fill");
+const skillsSection = document.querySelector("#skills");
+
+let isVisible = false;
+
+// animate to target
+function fillSkills() {
+  fills.forEach((fill) => {
+    fill.style.width = fill.dataset.width;
+  });
+}
+
+// reset to 0
+function resetSkills() {
+  fills.forEach((fill) => {
+    fill.style.width = "0%";
+  });
+}
+
+// scroll detection
+window.addEventListener("scroll", () => {
+  const rect = skillsSection.getBoundingClientRect();
+
+  const inView =
+    rect.top < window.innerHeight - 100 &&
+    rect.bottom > 150;
+
+  // ENTERING skills section
+  if (inView && !isVisible) {
+    isVisible = true;
+    fillSkills();
+  }
+
+  // LEAVING skills section
+  if (!inView && isVisible) {
+    isVisible = false;
+    resetSkills();
+  }
+});
+section {
+  margin: 80px auto;
+  padding: 80px;
+  width: 85%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
