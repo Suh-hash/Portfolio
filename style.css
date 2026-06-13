@@ -37,27 +37,294 @@ ul {
 }
 
 /* HERO */
+/* HERO */
+
 .hero {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:100px;
+
+padding:80px;
+
 }
 
-.hero h1 {
-  font-size: 60px;
+/* PHOTO */
+
+.hero-left{
+
+opacity:0;
+
+animation:
+photoEnter
+1.2s ease forwards;
+
 }
 
-.hero h3 {
-  margin-top: 20px;
+.hero-left img{
+
+width:340px;
+
+height:430px;
+
+object-fit:cover;
+
+border-radius:50% / 35%;
+
+border:1px solid rgba(255,255,255,.12);
+
 }
 
-.hero p {
-  margin-top: 20px;
-  width: 600px;
+/* TEXT */
+
+.hero-right{
+
+max-width:600px;
+
+opacity:0;
+
+animation:
+textEnter
+1.2s ease forwards;
+
+animation-delay:.4s;
+
 }
+
+
+.hero-title{
+
+font-size:76px;
+
+margin-bottom:15px;
+
+}
+
+.hero-right h2{
+
+font-size:34px;
+
+height:50px;
+
+margin-bottom:20px;
+
+}
+
+.hero-text{
+
+font-size:20px;
+
+line-height:1.8;
+
+opacity:.7;
+
+}
+
+/* CURSOR */
+
+.cursor{
+
+animation:
+blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+/* IMAGE */
+
+@keyframes photoEnter{
+
+from{
+
+opacity:0;
+
+transform:
+translateX(-80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0);
+
+}
+
+}
+
+/* TEXT */
+
+@keyframes textEnter{
+
+from{
+
+opacity:0;
+
+transform:
+translateX(80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0);
+
+}
+
+}
+
+
+.hero {
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:row;
+
+align-items:center;
+
+justify-content:center;
+
+gap:80px;
+
+padding:80px;
+
+}
+.hero-left{
+
+flex:1;
+
+display:flex;
+
+justify-content:flex-end;
+
+animation:
+photoEnter
+1.2s ease forwards;
+.hero-left{
+
+opacity:0;
+
+animation:
+
+imageSlide 1.4s ease-out forwards;
+
+}
+
+}
+.hero-right{
+
+flex:1;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:flex-start;
+
+animation:
+textEnter
+1.2s ease forwards;
+
+animation-delay:.4s;
+
+opacity:0;
+
+
+
+}
+.hero-left img{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+/* premium border */
+border:2px solid rgba(255,255,255,.15);
+
+/* subtle depth */
+box-shadow:
+0 0 0 8px rgba(255,255,255,.03),
+0 15px 50px rgba(255,255,255,.12);
+
+transition:.4s;
+
+}
+
+
+
+.hero-title {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* normal text */
+.intro-text {
+  font-weight: 400;
+  opacity: 0.6;
+  font-size: 40px;
+}
+
+/* highlighted name */
+.name-highlight {
+  font-weight: 700;
+  color: #fff;
+ 
+}
+
+
+
+@media(max-width:768px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-right{
+
+opacity:0;
+
+animation:
+
+textReveal 1.2s ease forwards;
+
+animation-delay:.5s;
+
+}
+
+}
+
 
 /* BUTTON */
 button {
@@ -234,12 +501,6 @@ html {
     width: 100%;
   }
 }
-console.log("My portfolio website is working!");
-
-const fills = document.querySelectorAll(".fill");
-const skillsSection = document.querySelector("#skills");
-
-let isVisible = false;
 
 // animate to target
 function fillSkills() {
@@ -289,4 +550,29 @@ section {
 section.show {
   opacity: 1;
   transform: translateY(0);
+}
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  font-size: 28px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  transform: translateY(-5px);
+  color: #4facfe;
+}.cursor {
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }

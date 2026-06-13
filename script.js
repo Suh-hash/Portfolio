@@ -104,3 +104,21 @@ function type() {
 }
 
 type();
+window.addEventListener("DOMContentLoaded", () => {
+  const text = "Suhas";
+  const target = document.getElementById("name");
+
+  if (!target) return;
+
+  let i = 0;
+
+  function typeOnce() {
+    if (i < text.length) {
+      target.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeOnce, 120);
+    }
+  }
+
+  setTimeout(typeOnce, 500);
+});

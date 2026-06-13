@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
   </head>
 <div class="app">
   <body>
@@ -16,29 +18,37 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      
     </nav>
 
     <!-- HERO -->
     <section id="hero" class="hero">
-      <div class="hero-content">
-        <h1><span>Welcome</span></h1>
-        <h1>
-  I am <span id="typing"></span><span class="cursor">|</span>
+
+<div class="hero-left">
+
+<img src="./assets/Profile.jpg" alt="Suhas">
+
+</div>
+
+<div class="hero-right">
+
+<h1 class="hero-title">
+  Hi, I'm <span id="name"></span><span class="cursor">|</span>
 </h1>
 
-        <p>Building Projects and growing in software development.</p>
+<h2>
 
-        <div class="hero-buttons">
-          <a href="#projects">
-            <button>View Projects</button>
-          </a>
+<span id="typing"></span>
 
-          <a href="./assets/Suhas_Hiremath.pdf" target="_blank">
-            <button>Resume</button>
-          </a>
-        </div>
-      </div>
-    </section>
+<span class="cursor">|</span>
+
+</h2>
+
+
+
+</div>
+
+</section>
 
     <!-- ABOUT -->
     <section id="about" class="about">
@@ -149,27 +159,33 @@
 
     <!-- CONTACT -->
     <section id="contact" class="contact">
-      <h2>Contact Me</h2>
+  <h2>Contact Me</h2>
 
-      <p>Email: hsuhas23@gmail.com</p>
+  <p>Let's connect and build something great </p>
 
-      <p>LinkedIn: Add later</p>
+  <div class="contact-icons">
 
-      <a href="./assets/resume.pdf" target="_blank">
-        <button>View Resume</button>
-      </a>
+    <!-- Email -->
+    <a href="mailto:hsuhas23@gmail.com" target="_blank">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
 
-      <a href="./assets/resume.pdf" download>
-        <button>Download Resume</button>
-      </a>
-      <a href="https://github.com/yourname" target="_blank"
-        ><button>GitHub</button></a
-      >
-      <a href="https://linkedin.com" target="_blank"
-        ><button>LinkedIn</button></a
-      >
-    </section>
-    </div>
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/yourusername" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+
+    <!-- Phone -->
+    <a href="tel:+91XXXXXXXXXX">
+  <i class="fa-solid fa-phone"></i>
+</a>
+  </div>
+</section>
 
     <footer>
       <p>© 2026 Suhas • Designed and developed by Suhas</p>
