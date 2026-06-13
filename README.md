@@ -17,7 +17,7 @@ Personal portfolio website built using HTML, CSS and JavaScript.
 
 ## Live Demo
 
-(add link later)
+[(add link later)](https://suh-hash.github.io/Portfolio/)
 
 ## Screenshots
 
