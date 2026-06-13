@@ -1,23 +1,39 @@
 console.log("My portfolio website is working!");
 
-// Select elements
 const fills = document.querySelectorAll(".fill");
-const skills = document.querySelector(".skills");
+const skillsSection = document.querySelector("#skills");
 
-let started = false;
+let isVisible = false;
 
-// Animate when skills section comes into view
-function animateSkills() {
-  const position = skills.getBoundingClientRect();
-
-  if (position.top < window.innerHeight - 100 && !started) {
-    fills.forEach((fill) => {
-      fill.style.width = fill.dataset.width;
-    });
-
-    started = true;
-  }
+// animate to target
+function fillSkills() {
+  fills.forEach((fill) => {
+    fill.style.width = fill.dataset.width;
+  });
 }
 
-window.addEventListener("scroll", animateSkills);
-window.addEventListener("load", animateSkills);
+// reset to 0
+function resetSkills() {
+  fills.forEach((fill) => {
+    fill.style.width = "0%";
+  });
+}
+
+// scroll detection
+window.addEventListener("scroll", () => {
+  const rect = skillsSection.getBoundingClientRect();
+
+  const inView = rect.top < window.innerHeight - 100 && rect.bottom > 150;
+
+  // ENTERING skills section
+  if (inView && !isVisible) {
+    isVisible = true;
+    fillSkills();
+  }
+
+  // LEAVING skills section
+  if (!inView && isVisible) {
+    isVisible = false;
+    resetSkills();
+  }
+});
