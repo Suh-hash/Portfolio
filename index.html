@@ -1,201 +1,150 @@
-
 <!doctype html>
-
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- NAV -->
     <nav>
       <h2>suhas</h2>
       <ul>
         <li><a href="#about">About</a></li>
-
         <li><a href="#skills">Skills</a></li>
-
         <li><a href="#projects">Projects</a></li>
-
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <section class="hero">
 
-<div class="hero-content">
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1><span>Welcome</span></h1>
 
-<h1>
+        <p>Building Projects and growing in software development.</p>
 
+        <div class="hero-buttons">
+          <a href="#projects">
+            <button>View Projects</button>
+          </a>
 
-<span>
-Welcome
-</span>
-
-</h1>
-
-<p>
-
-Building Projects and growing in software development.
-
-</p>
-
-
-<div class="hero-buttons">
-
-<button>
-
-View Projects
-
-</button>
-
-
-<a
-href="./assets/resume.pdf"
-target="_blank">
-
-<button>
-
-Resume
-
-</button>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skill">
-        <p>Java</p>
-
-        <div class="bar">
-          <div class="fill" data-width="75%"></div>
+          <a href="./assets/Suhas_Hiremath.pdf" target="_blank">
+            <button>Resume</button>
+          </a>
         </div>
       </div>
-      <div class="skill-header">
+    </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+
+      <div class="about-container">
+        <p>
+          Hi, I'm Suhas, a Computer Science student passionate about building
+          simple and useful web applications. I enjoy learning frontend
+          development and improving my skills by building real projects.
+        </p>
+
+        <p>
+          My goal is to become a full-stack developer and create projects that
+          solve real problems. Right now, I'm focusing on HTML, CSS, and
+          JavaScript.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+
+      <div class="skill">
+        <p>Java</p>
+        <div class="bar"><div class="fill" data-width="75%"></div></div>
+      </div>
 
       <div class="skill">
         <p>SQL</p>
+        <div class="bar"><div class="fill" data-width="70%"></div></div>
+      </div>
 
-        <div class="bar">
-          <div class="fill" data-width="70%"></div>
-        </div>
-        </div>
       <div class="skill">
         <p>HTML</p>
-
-        <div class="bar">
-          <div class="fill" data-width="65%"></div>
-        </div>
+        <div class="bar"><div class="fill" data-width="65%"></div></div>
       </div>
+
       <div class="skill">
         <p>CSS</p>
+        <div class="bar"><div class="fill" data-width="80%"></div></div>
+      </div>
 
-        <div class="bar">
-          <div class="fill" data-width="80%"></div>
-        </div>
-        </div>
       <div class="skill">
         <p>JavaScript</p>
-
-        <div class="bar">
-          <div class="fill" data-width="60%"></div>
-        </div>
+        <div class="bar"><div class="fill" data-width="60%"></div></div>
       </div>
+
       <div class="skill">
         <p>React</p>
-
-        <div class="bar">
-          <div class="fill" data-width="50%"></div>
-        </div>
+        <div class="bar"><div class="fill" data-width="50%"></div></div>
       </div>
+
       <div class="skill">
         <p>Git</p>
+        <div class="bar"><div class="fill" data-width="70%"></div></div>
+      </div>
+    </section>
 
-        <div class="bar">
-          <div class="fill" data-width="70%"></div>
-        </div>
-      </section>
-     
-
+    <!-- PROJECTS -->
     <section id="projects" class="projects">
       <h2>Projects</h2>
 
       <div class="project-container">
+        <!-- Project 1 -->
         <div class="project-card">
           <h3>Portfolio Website</h3>
-
           <p>Built using HTML, CSS and JavaScript.</p>
-
           <button>View</button>
         </div>
 
+        <!-- Project 2 -->
         <div class="project-card">
-          
           <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+          </div>
 
-<span>HTML</span>
+          <div class="project-gallery">
+            <img src="./assets/image11.png" />
+            <img src="./assets/image22.png" />
+            <img src="./assets/image33.png" />
+            <img src="./assets/image44.png" />
+          </div>
 
-<span>CSS</span>
+          <h3>Portfolio Website</h3>
 
-<span>JS</span>
+          <p>Responsive portfolio built using HTML CSS JS</p>
 
-</div>
+          <div class="buttons">
+            <a
+              href="https://suh-hash.github.io/Portfolio/"
+              target="_blank"
+              rel="noopener"
+            >
+              <button>Live Demo</button>
+            </a>
 
-<div class="project-gallery">
-
-<img src="./assets/image11.png">
-
-<img src="./assets/image22.png">
-
-<img src="./assets/image33.png">
-<img src="./assets/image44.png">
-
-</div>
-<h3>
-
-Portfolio Website
-
-</h3>
-
-<p>
-
-Responsive portfolio built using HTML CSS JS
-
-</p>
-<div class="buttons">
-
-<a href="https://suh-hash.github.io/Portfolio/" target="_blank" rel="noopener noreferrer"> 
-
-<button>
-
-Live Demo
-
-</button>
-
-</a>
-
-
-<a href="https://github.com/Suh-hash/Portfolio.git">
-
-<button>
-
-Code
-
-</button>
-
-</a>
-
-</div>
-
-
-</div>
+            <a href="https://github.com/Suh-hash/Portfolio" target="_blank">
+              <button>Code</button>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="contact">
       <h2>Contact Me</h2>
 
@@ -203,18 +152,19 @@ Code
 
       <p>LinkedIn: Add later</p>
 
-      <a href="assests/Suhas Hiremath.pdf" target="_blank">
+      <a href="./assets/resume.pdf" target="_blank">
         <button>View Resume</button>
       </a>
 
-      <a href="assests/Suhas Hiremath.pdf" download>
+      <a href="./assets/resume.pdf" download>
         <button>Download Resume</button>
       </a>
     </section>
 
-    <script src="script.js"></script>
     <footer>
       <p>© 2026 Suhas • Designed and developed by Suhas</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
